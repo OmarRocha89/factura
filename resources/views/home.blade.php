@@ -15,6 +15,11 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+
+                     <div class="pull-right">
+                        <a class="btn btn-primary" href="{{ url('pdf') }}">Download PDF</a>
+                    </div>
+
                 </div>
             </div>
         </div>

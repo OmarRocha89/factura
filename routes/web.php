@@ -21,7 +21,7 @@ Route::get('/', function () {
 
 /*Auth::routes();*/
 
-
+Route::resource('pdf','PdfController');
 
 Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin'], function () {
     Route::get('/admin', 'Admin\IndexController@index')->name('admin');
@@ -31,6 +31,7 @@ Route::group(['middleware' => ['auth', 'admin'], 'prefix' => 'admin'], function 
 // user protected routes
 Route::group(['middleware' => ['auth', 'user']], function () {
     Route::get('/home', 'HomeController@index')->name('home');
+    
 });
 
 
